@@ -62,7 +62,7 @@ def update_instance(cluster_arn, instance_arn):
     if "NoUpdateAvailableException" == e.__class__.__name__:
       print("    -> instance does not need an update")
 
-def run():
+def run(*args, **kwargs):
   clusters = get_clusters()
   for cluster in clusters:
     print("** working on cluster: {}".format(cluster))
